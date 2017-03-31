@@ -1,9 +1,9 @@
 def InsertSort(arr):
     for i in range(1, len(arr)):
-        if arr[i] > arr[i - 1]:
+        if arr[i - 1] > arr[i]:
             temp = arr[i]
             j = i
-            while(arr[j] > arr[j - 1] and j > 0):
+            while(j > 0 and arr[j - 1] > temp):
                 arr[j] = arr[j - 1]
                 j -= 1
             arr[j] = temp
