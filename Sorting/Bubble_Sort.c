@@ -13,15 +13,13 @@ int main(){
 
 void bubble_sort(int s[], int len){
     int temp, i, j;
-    for (i = 0; i < len; i++)
-    {
-        for (j = i + 1; j < len; j++)
-        {
-            if (s[i] > s[j])
-            {
-                temp = s[i];
-                s[i] = s[j];
-                s[j] = temp;
+    for (i = 0; i < len; i++){
+        //每一次由底至上地上升
+        for (j = len - 1; j > i; j--){
+            if (s[j] < s[j-1]){
+                temp = s[j];
+                s[j] = s[j - 1];
+                s[j - 1] = temp;
             }
         }
     }
